@@ -1,0 +1,37 @@
+<div class="container">
+    <h3>todos</h3>
+
+    <form class="well col-xs-12" name="restaurantSetupForm">
+        <input class="add-to-list-input col-xs-9" data-ng-model="toDoItem" placeholder="What needs to be done?"/>
+        <button class="btn btn-primary add-to-list-btn col-xs-2" data-ng-click="addToList()">Add new</button>
+    </form>
+    <table class="to-do-table">
+        <tr class="to-do-row" data-ng-repeat="item in toDoItemList track by $index" data-ng-show="item.selectedToBeViewed">
+            <td class="is-complete-{{item.isComplete}} click tick" data-ng-click="toDoComplete($index)">&#10004;</td>
+            <td class="to-do-detail highlighted-{{item.isHighlighted}} click" data-ng-Dblclick="editItem($index)" data-ng-mouseover="highlightItem($index)" data-ng-mouseleave="unhighlightItem($index)" data-ng-click="highlightItem($index)">
+                <input class="to-do-detail-input to-do-is-complete-{{item.isComplete}}" type="text" data-ng-disabled="item.isDisabled" data-ng-model="item.task">
+            </td>
+            <td data-ng-mouseover="highlightItem($index)" data-ng-mouseleave="unhighlightItem($index)" data-ng-click="highlightItem($index)">
+                <button class="btn btn-danger delete-btn admin-btn" data-ng-show="item.isHighlighted" data-ng-click="deleteItem()">Del</button>
+            </td>
+        </tr>
+
+    </table>
+
+    <table class="filter-table">
+        <tr>
+            <td class="filter-td"><span>{{toDoItemList.length}} items left</span></td>
+            <td class="filter filter-td">
+                <a class="click" data-ng-click="filterItems('all')">All</a> /
+                <a class="click" data-ng-click="filterItems('active')">Active</a> /
+                <a class="click" data-ng-click="filterItems('completed')">Complete</a>
+            </td>
+            <td class="filter-td"><a class="click" data-ng-click="clearCompletedItems()">Clear completed ({{noOfCompletedItems}})</a></td>
+        </tr>
+    </table>
+    <div class="note">Double Cllick To Edit Tasks</div>
+
+    <br>
+
+</div>
+

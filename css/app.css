@@ -1,0 +1,132 @@
+body{
+    background-color: #f6f6f6;
+}
+h3
+{
+    color: #09c;
+    font-weight: bold;
+    font-size: 60px;
+}
+table, .well{
+    width: 100%;
+    -moz-box-shadow: 0px 2px 5px #ccc;
+    -webkit-box-shadow: 0px 2px 5px #ccc;
+    box-shadow: 0px 2px 5px #ccc;
+}
+.well{
+    padding: 10px;
+}
+.container
+{
+    margin-top: 20px;
+}
+.add-to-list-btn{
+    margin-left: 20px;
+}
+.add-to-list-input{
+    padding: 5px;
+}
+
+.is-complete{
+    width: 5%;
+}
+.to-do-table{
+    background-color: #fff;
+}
+.to-do-detail
+{
+    width: 90%;
+}
+.to-do-detail-input{
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+    padding:10px;
+}
+.filter-table{
+    background-color: #efefef;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+.filter-table td{
+    padding: 10px;
+    width: 33%;
+}
+.filter
+{
+    text-align: center;
+}
+.filter-td:last-child{
+    text-align: right;
+}
+.tick{
+    width: 5%;
+    text-align: center;
+    border-right: 1px solid #c43c35;
+}
+.highlighted-true{
+}
+.highlighted-false{
+    background-color: transparent;
+}
+.to-do-row{
+    border-top:1px solid #31b0d5;
+}
+.to-do-row:last-child{
+    border-bottom: 1px solid #31b0d5;
+}
+.to-do-row:hover{
+    background-color: #e7c3c3;
+}
+.is-complete-true{
+    color: #67b168;
+}
+.is-complete-false{
+    color: #000;
+    font-weight: bold;
+}
+.to-do-is-complete-true{
+    color: #aaa;
+    text-decoration: line-through;
+}
+.to-do-is-complete-false{
+    color: #000000;
+    text-decoration: none;
+}
+.click:hover{
+    cursor: pointer;
+}
+.admin-btn{
+    float: right;
+    padding: 1px 3px 1px 3px;
+    font-size: 10px;
+    margin-right: 10px;
+}
+.text-primary{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.note{
+    background-color: transparent;
+    text-align: center;
+    margin-top: 30px;
+    color: #999;
+}
+.to-do-row.ng-enter{
+    transition:1s;
+    background-color: #31b0d5;
+    opacity: 0;
+}
+.to-do-row.ng-enter-active{
+    background-color: transparent;
+    opacity:1;
+}
+
+
+
+
